@@ -1,8 +1,10 @@
 package com.example.registration
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.registration.databinding.ActivityLoginBinding
 import com.example.registration.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -13,7 +15,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(binding.root)
+        binding.button.setOnClickListener {
+            val intent = Intent(this, ActivityLoginBinding::class.java)
+            startActivity(intent)
+        }
     }
+
+
+
 
     override fun onResume() {
         super.onResume()
@@ -25,7 +34,9 @@ class MainActivity : AppCompatActivity() {
      var user = binding.etusername.text.toString()
        var email = binding.etemail.text.toString()
      var passwor = binding.etpassword.text.toString()
+
        var error = false
+
      if (number.isEmpty()) {
            print("number required")
        }
