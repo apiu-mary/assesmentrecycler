@@ -39,19 +39,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tifirstName">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="152dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/baseline_phone_24" />
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:hint="nu,mber" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="168dp"
-        android:layout_weight="1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_phone_24"
-        tools:layout_editor_absoluteX="6dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

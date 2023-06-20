@@ -15,10 +15,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(binding.root)
+//
         binding.button.setOnClickListener {
-            val intent = Intent(this, ActivityLoginBinding::class.java)
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
+
+
+        onResume()
     }
 
 
@@ -38,16 +42,22 @@ class MainActivity : AppCompatActivity() {
        var error = false
 
      if (number.isEmpty()) {
-           print("number required")
+         binding.etphonenumber.error="number required"
+           error=true
        }
       if (user.isEmpty()) {
-            print("number required")
+          binding.etusername.error="number required"
+          error=true
+
       }
         if (email.isEmpty()) {
-           print("number required")
+            binding.etemail.error="number required"
+            error=true
+
         }
       if (passwor.isEmpty()) {
-            print("number required")
+            binding.etpassword.error="number required"
+          error=true
         }
         if (!error) {
             Toast.makeText(this, "$number,$user,$email,$passwor", Toast.LENGTH_LONG).show()
