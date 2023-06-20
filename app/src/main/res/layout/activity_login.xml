@@ -6,4 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="136dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tifirstName"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etfirstname"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tinumber"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tifirstName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="nu,mber" />
+    </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
